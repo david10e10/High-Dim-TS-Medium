@@ -18,7 +18,7 @@ def cleaner(file):
     dataset: cleaned dataset.
 
     '''
-    df_all = pd.read_csv(file)
+    df_all = pd.read_csv(file, index_col='timestamp')
 
     # remove cols with all nans
     df_all.dropna(axis=1, how='all',inplace=True)
